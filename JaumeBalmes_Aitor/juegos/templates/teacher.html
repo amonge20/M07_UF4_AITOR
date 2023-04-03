@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block content %}
+<p>Benvinguts a la pàgina prof de la app Juegos!</p>
+<p>Dades Professor:</p>
+<div>
+    {% for t in prof %}
+    <li>{{t.name}} {{t.surname}} {{t.age}}</li>
+    {% endfor %}
+</div>
+{% endblock %}
