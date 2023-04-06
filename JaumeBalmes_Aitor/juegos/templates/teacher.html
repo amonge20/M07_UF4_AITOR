@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>Profe con id {{thcr.id}}</h1>
+<ul>
+    <li>Nom: {{thcr.name}}</li>
+    <li>Cognom: {{thcr.surname}}</li>
+    <li>Edat: {{thcr.age}}</li>
+</ul>
+
+<a href="/juegos/teachers">Volver</a>
+{% endblock %}

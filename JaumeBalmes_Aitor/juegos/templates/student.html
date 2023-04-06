@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>Alumno con id {{stdnt.id}}</h1>
+<ul>
+    <li>Nom: {{stdnt.name}}</li>
+    <li>Cognom: {{stdnt.surname}}</li>
+    <li>Edat: {{stdnt.age}}</li>
+</ul>
+
+<a href="/juegos/students">Volver</a>
+{% endblock %}
