@@ -2,9 +2,9 @@
 {% block content %}
 <p>Benvinguts a la pàgina users de la app Juegos!</p>
 <p>Dades alumnes:</p>
-<div>
+<ul>
     {% for s in alumn %}
-    <li>{{s.name}} {{s.surname}} {{s.age}}</li>
+    <li>{{s.id}} {{s.name}} {{s.surname}} {{s.age}} <a href="student/{{s.id}}"> Más info </a></li>
     {% endfor %}
-</div>
+</ul>
 {% endblock %}

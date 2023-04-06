@@ -1,10 +1,11 @@
 {% extends 'index.html' %}
 {% block content %}
-<p>Benvinguts a la pàgina prof de la app Juegos!</p>
-<p>Dades Professor:</p>
-<div>
-    {% for t in prof %}
-    <li>{{t.name}} {{t.surname}} {{t.age}}</li>
-    {% endfor %}
-</div>
+<h1>Profe con id {{thcr.id}}</h1>
+<ul>
+    <li>Nom: {{thcr.name}}</li>
+    <li>Cognom: {{thcr.surname}}</li>
+    <li>Edat: {{thcr.age}}</li>
+</ul>
+
+<a href="/juegos/teachers">Volver</a>
 {% endblock %}
