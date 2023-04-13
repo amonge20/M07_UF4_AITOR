@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>Formulari Juegos</h1>
+
+<form action="" methhod="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+
+{% endblock %}
