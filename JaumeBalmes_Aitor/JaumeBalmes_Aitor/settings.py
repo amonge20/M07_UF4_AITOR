@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'JaumeBalmes_Aitor.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'juegos',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'HOST': '172.17.0.2',
         'PORT': '5432',
     }
 }
