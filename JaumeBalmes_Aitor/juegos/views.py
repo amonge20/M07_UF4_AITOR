@@ -2,11 +2,34 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .forms import PersonForm
+from django.shortcuts import render, redirect
 
 def user_form(request):
     form = PersonForm()
     context = {'form':form}
-    return  render(request, 'form.html', context)
+    return render(request, "form.html", context)
+def alumneForm(request):
+    form = AlumneForm()
+    form = AlumneForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect('stdnts')
+
+    context = {'form': form}
+    return render(request, 'alumneForm.html', context)
+
+def profeForm(request):
+    form = ProfeForm()
+    form = ProfeForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect('tchrs')
+
+    context = {'form': form}
+    return render(request, 'profeForm.html', context)
+
+
+
 def index(request):
    template = loader.get_template('index.html')
    return HttpResponse(template.render())
