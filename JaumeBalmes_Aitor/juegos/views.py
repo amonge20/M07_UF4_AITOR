@@ -28,6 +28,30 @@ def profeForm(request):
     context = {'form': form}
     return render(request, 'profeForm.html', context)
 
+def update_alumne(request, pk):
+    person = Person.objects.get(id = pk)
+    form = PersonForm(instance=person)
+
+    if request.method == 'POST':
+        form = PersonForm(request.POST, instance=person)
+        if form.is_valid()
+            form.save()
+            return redirect('UpdateAlumne')
+    context = {'form':form}
+    return render(request, 'alumneUpdate.html', context)
+
+
+def update_profe(request, pk):
+    person = Person.objects.get(id=pk)
+    form = PersonForm(instance=person)
+
+    if request.method == 'POST':
+        form = PersonForm(request.POST, instance=person)
+        if form.is_valid()
+            form.save()
+            return redirect('UpdateProfe')
+    context = {'form': form}
+    return render(request, 'profeUpdate.html', context)
 
 
 def index(request):
